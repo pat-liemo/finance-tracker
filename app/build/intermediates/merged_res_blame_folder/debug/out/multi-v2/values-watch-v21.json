@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.personalfinance.app-mergeDebugResources-92:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "/home/pat-liemo/.gradle/caches/transforms-3/8522fe63a7711239f7d2c5076855296c/transformed/appcompat-1.6.1/res/values-watch-v21/values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

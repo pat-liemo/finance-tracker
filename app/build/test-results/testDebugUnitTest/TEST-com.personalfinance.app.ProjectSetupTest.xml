@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.personalfinance.app.ProjectSetupTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2025-12-26T14:46:27" hostname="aloo-pc" time="3.731">
+  <properties/>
+  <testcase name="database module has required provider methods" classname="com.personalfinance.app.ProjectSetupTest" time="0.035"/>
+  <testcase name="repository implementations exist" classname="com.personalfinance.app.ProjectSetupTest" time="0.0"/>
+  <testcase name="database entity classes exist and are properly configured" classname="com.personalfinance.app.ProjectSetupTest" time="0.005"/>
+  <testcase name="repository interfaces exist" classname="com.personalfinance.app.ProjectSetupTest" time="0.001"/>
+  <testcase name="repository module has required binding methods" classname="com.personalfinance.app.ProjectSetupTest" time="0.0"/>
+  <testcase name="application class exists and is configured for hilt" classname="com.personalfinance.app.ProjectSetupTest" time="0.853"/>
+  <testcase name="database class exists and is properly configured" classname="com.personalfinance.app.ProjectSetupTest" time="0.007"/>
+  <testcase name="kotlin datetime functionality works" classname="com.personalfinance.app.ProjectSetupTest" time="0.009"/>
+  <testcase name="network module has required provider methods" classname="com.personalfinance.app.ProjectSetupTest" time="0.064"/>
+  <testcase name="project setup is correct" classname="com.personalfinance.app.ProjectSetupTest" time="0.008"/>
+  <testcase name="dao interfaces exist and are properly configured" classname="com.personalfinance.app.ProjectSetupTest" time="0.002"/>
+  <testcase name="dependency injection modules are properly configured" classname="com.personalfinance.app.ProjectSetupTest" time="2.724"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,853 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.personalfinance.app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Network permissions -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:6:5-67
+12-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:7:5-79
+13-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:7:22-76
+14
+15    <!-- Biometric permissions -->
+16    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+16-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:10:5-74
+16-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:10:22-71
+17    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+17-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:11:5-72
+17-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:11:22-69
+18
+19    <!-- Storage permissions -->
+20    <uses-permission
+20-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:14:5-15:38
+21        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+21-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:14:22-78
+22        android:maxSdkVersion="28" />
+22-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:15:9-35
+23
+24    <!-- Notification permissions -->
+25    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+25-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:18:5-77
+25-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:18:22-74
+26    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+26-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:24:5-68
+26-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:24:22-65
+27    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+27-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:26:5-82
+27-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:26:22-79
+28    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+28-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:25:5-79
+28-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:25:22-76
+29    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+29-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:26:5-88
+29-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:26:22-85
+30    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+30-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:27:5-82
+30-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:27:22-79
+31    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+31-->[com.google.android.recaptcha:recaptcha:18.4.0] /home/pat-liemo/.gradle/caches/transforms-3/4c81e43c9567ca9adc3058be72f26e0d/transformed/recaptcha-18.4.0/AndroidManifest.xml:9:5-98
+31-->[com.google.android.recaptcha:recaptcha:18.4.0] /home/pat-liemo/.gradle/caches/transforms-3/4c81e43c9567ca9adc3058be72f26e0d/transformed/recaptcha-18.4.0/AndroidManifest.xml:9:22-95
+32    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+32-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:26:5-110
+32-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:26:22-107
+33    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+33-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:25:5-81
+33-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:25:22-78
+34    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+34-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:26:5-77
+34-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:26:22-74
+35
+36    <permission
+36-->[androidx.core:core:1.12.0] /home/pat-liemo/.gradle/caches/transforms-3/52e157bf5b172fbc316f084c110fcf5c/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+37        android:name="com.personalfinance.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+37-->[androidx.core:core:1.12.0] /home/pat-liemo/.gradle/caches/transforms-3/52e157bf5b172fbc316f084c110fcf5c/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+38        android:protectionLevel="signature" />
+38-->[androidx.core:core:1.12.0] /home/pat-liemo/.gradle/caches/transforms-3/52e157bf5b172fbc316f084c110fcf5c/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+39
+40    <uses-permission android:name="com.personalfinance.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+40-->[androidx.core:core:1.12.0] /home/pat-liemo/.gradle/caches/transforms-3/52e157bf5b172fbc316f084c110fcf5c/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+40-->[androidx.core:core:1.12.0] /home/pat-liemo/.gradle/caches/transforms-3/52e157bf5b172fbc316f084c110fcf5c/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+41
+42    <application
+42-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:20:5-63:19
+43        android:name="com.personalfinance.app.PersonalFinanceApplication"
+43-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:21:9-51
+44        android:allowBackup="true"
+44-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:22:9-35
+45        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+45-->[androidx.core:core:1.12.0] /home/pat-liemo/.gradle/caches/transforms-3/52e157bf5b172fbc316f084c110fcf5c/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+46        android:dataExtractionRules="@xml/data_extraction_rules"
+46-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:23:9-65
+47        android:debuggable="true"
+48        android:extractNativeLibs="false"
+49        android:fullBackupContent="@xml/backup_rules"
+49-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:24:9-54
+50        android:icon="@mipmap/ic_launcher"
+50-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:25:9-43
+51        android:label="@string/app_name"
+51-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:26:9-41
+52        android:roundIcon="@mipmap/ic_launcher_round"
+52-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:27:9-54
+53        android:supportsRtl="true"
+53-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:28:9-35
+54        android:theme="@style/Theme.PersonalFinanceApp" >
+54-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:29:9-56
+55        <activity
+55-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:32:9-41:20
+56            android:name="com.personalfinance.app.presentation.MainActivity"
+56-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:33:13-54
+57            android:exported="true"
+57-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:34:13-36
+58            android:label="@string/app_name"
+58-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:35:13-45
+59            android:theme="@style/Theme.PersonalFinanceApp" >
+59-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:36:13-60
+60            <intent-filter>
+60-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:37:13-40:29
+61                <action android:name="android.intent.action.MAIN" />
+61-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:38:17-69
+61-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:38:25-66
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:39:17-77
+63-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:39:27-74
+64            </intent-filter>
+65        </activity>
+66
+67        <!-- Firebase Messaging Service -->
+68        <service
+68-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:44:9-50:19
+69            android:name="com.personalfinance.app.data.remote.notifications.PersonalFinanceMessagingService"
+69-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:45:13-86
+70            android:exported="false" >
+70-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:46:13-37
+71            <intent-filter>
+71-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:47:13-49:29
+72                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+72-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:48:17-78
+72-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:48:25-75
+73            </intent-filter>
+74        </service>
+75
+76        <!-- Work Manager -->
+77        <provider
+78            android:name="androidx.startup.InitializationProvider"
+78-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:54:13-67
+79            android:authorities="com.personalfinance.app.androidx-startup"
+79-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:55:13-68
+80            android:exported="false" >
+80-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:56:13-37
+81            <meta-data
+81-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:58:13-60:52
+82                android:name="androidx.work.WorkManagerInitializer"
+82-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:59:17-68
+83                android:value="androidx.startup" />
+83-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:60:17-49
+84            <meta-data
+84-->[androidx.emoji2:emoji2:1.3.0] /home/pat-liemo/.gradle/caches/transforms-3/68812bc59cde3c4da58ba6bec3793793/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+85                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+85-->[androidx.emoji2:emoji2:1.3.0] /home/pat-liemo/.gradle/caches/transforms-3/68812bc59cde3c4da58ba6bec3793793/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+86                android:value="androidx.startup" />
+86-->[androidx.emoji2:emoji2:1.3.0] /home/pat-liemo/.gradle/caches/transforms-3/68812bc59cde3c4da58ba6bec3793793/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+87            <meta-data
+87-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/pat-liemo/.gradle/caches/transforms-3/1c6d353b446bf08da63ad9a1eb3137a5/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+88                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+88-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/pat-liemo/.gradle/caches/transforms-3/1c6d353b446bf08da63ad9a1eb3137a5/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+89                android:value="androidx.startup" />
+89-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/pat-liemo/.gradle/caches/transforms-3/1c6d353b446bf08da63ad9a1eb3137a5/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+90            <meta-data
+90-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+91                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+91-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+92                android:value="androidx.startup" />
+92-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+93        </provider>
+94
+95        <service
+95-->[com.google.firebase:firebase-perf-ktx:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/aaf0c75c0c5a165b835f77302b27322b/transformed/firebase-perf-ktx-20.5.1/AndroidManifest.xml:9:9-15:19
+96            android:name="com.google.firebase.components.ComponentDiscoveryService"
+96-->[com.google.firebase:firebase-perf-ktx:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/aaf0c75c0c5a165b835f77302b27322b/transformed/firebase-perf-ktx-20.5.1/AndroidManifest.xml:10:13-84
+97            android:directBootAware="true"
+97-->[com.google.firebase:firebase-common:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/a0bc54894bbfb010c069bd3b7612ffd7/transformed/firebase-common-20.4.2/AndroidManifest.xml:32:13-43
+98            android:exported="false" >
+98-->[com.google.firebase:firebase-perf-ktx:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/aaf0c75c0c5a165b835f77302b27322b/transformed/firebase-perf-ktx-20.5.1/AndroidManifest.xml:11:13-37
+99            <meta-data
+99-->[com.google.firebase:firebase-perf-ktx:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/aaf0c75c0c5a165b835f77302b27322b/transformed/firebase-perf-ktx-20.5.1/AndroidManifest.xml:12:13-14:85
+100                android:name="com.google.firebase.components:com.google.firebase.perf.ktx.FirebasePerfLegacyRegistrar"
+100-->[com.google.firebase:firebase-perf-ktx:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/aaf0c75c0c5a165b835f77302b27322b/transformed/firebase-perf-ktx-20.5.1/AndroidManifest.xml:13:17-119
+101                android:value="com.google.firebase.components.ComponentRegistrar" />
+101-->[com.google.firebase:firebase-perf-ktx:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/aaf0c75c0c5a165b835f77302b27322b/transformed/firebase-perf-ktx-20.5.1/AndroidManifest.xml:14:17-82
+102            <meta-data
+102-->[com.google.firebase:firebase-perf:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/d8c9160766f3253b51e5101cc38dbfcf/transformed/firebase-perf-20.5.1/AndroidManifest.xml:14:13-16:85
+103                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfKtxRegistrar"
+103-->[com.google.firebase:firebase-perf:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/d8c9160766f3253b51e5101cc38dbfcf/transformed/firebase-perf-20.5.1/AndroidManifest.xml:15:17-112
+104                android:value="com.google.firebase.components.ComponentRegistrar" />
+104-->[com.google.firebase:firebase-perf:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/d8c9160766f3253b51e5101cc38dbfcf/transformed/firebase-perf-20.5.1/AndroidManifest.xml:16:17-82
+105            <meta-data
+105-->[com.google.firebase:firebase-perf:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/d8c9160766f3253b51e5101cc38dbfcf/transformed/firebase-perf-20.5.1/AndroidManifest.xml:17:13-19:85
+106                android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+106-->[com.google.firebase:firebase-perf:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/d8c9160766f3253b51e5101cc38dbfcf/transformed/firebase-perf-20.5.1/AndroidManifest.xml:18:17-109
+107                android:value="com.google.firebase.components.ComponentRegistrar" />
+107-->[com.google.firebase:firebase-perf:20.5.1] /home/pat-liemo/.gradle/caches/transforms-3/d8c9160766f3253b51e5101cc38dbfcf/transformed/firebase-perf-20.5.1/AndroidManifest.xml:19:17-82
+108            <meta-data
+108-->[com.google.firebase:firebase-auth-ktx:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/74b6eab5948be890ccbbacf9944e6494/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:11:13-13:85
+109                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar"
+109-->[com.google.firebase:firebase-auth-ktx:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/74b6eab5948be890ccbbacf9944e6494/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:12:17-119
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[com.google.firebase:firebase-auth-ktx:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/74b6eab5948be890ccbbacf9944e6494/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:13:17-82
+111            <meta-data
+111-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:69:13-71:85
+112                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+112-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:70:17-109
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:71:17-82
+114            <meta-data
+114-->[com.google.firebase:firebase-storage-ktx:20.3.0] /home/pat-liemo/.gradle/caches/transforms-3/0bb9cb262a26202fbf967b881c8f0e5a/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:12:13-14:85
+115                android:name="com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageLegacyRegistrar"
+115-->[com.google.firebase:firebase-storage-ktx:20.3.0] /home/pat-liemo/.gradle/caches/transforms-3/0bb9cb262a26202fbf967b881c8f0e5a/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:13:17-125
+116                android:value="com.google.firebase.components.ComponentRegistrar" />
+116-->[com.google.firebase:firebase-storage-ktx:20.3.0] /home/pat-liemo/.gradle/caches/transforms-3/0bb9cb262a26202fbf967b881c8f0e5a/transformed/firebase-storage-ktx-20.3.0/AndroidManifest.xml:14:17-82
+117            <meta-data
+117-->[com.google.firebase:firebase-storage:20.3.0] /home/pat-liemo/.gradle/caches/transforms-3/7f04e5a6e7d0b3f5927a320c2e860523/transformed/firebase-storage-20.3.0/AndroidManifest.xml:30:13-32:85
+118                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
+118-->[com.google.firebase:firebase-storage:20.3.0] /home/pat-liemo/.gradle/caches/transforms-3/7f04e5a6e7d0b3f5927a320c2e860523/transformed/firebase-storage-20.3.0/AndroidManifest.xml:31:17-118
+119                android:value="com.google.firebase.components.ComponentRegistrar" />
+119-->[com.google.firebase:firebase-storage:20.3.0] /home/pat-liemo/.gradle/caches/transforms-3/7f04e5a6e7d0b3f5927a320c2e860523/transformed/firebase-storage-20.3.0/AndroidManifest.xml:32:17-82
+120            <meta-data
+120-->[com.google.firebase:firebase-storage:20.3.0] /home/pat-liemo/.gradle/caches/transforms-3/7f04e5a6e7d0b3f5927a320c2e860523/transformed/firebase-storage-20.3.0/AndroidManifest.xml:33:13-35:85
+121                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+121-->[com.google.firebase:firebase-storage:20.3.0] /home/pat-liemo/.gradle/caches/transforms-3/7f04e5a6e7d0b3f5927a320c2e860523/transformed/firebase-storage-20.3.0/AndroidManifest.xml:34:17-107
+122                android:value="com.google.firebase.components.ComponentRegistrar" />
+122-->[com.google.firebase:firebase-storage:20.3.0] /home/pat-liemo/.gradle/caches/transforms-3/7f04e5a6e7d0b3f5927a320c2e860523/transformed/firebase-storage-20.3.0/AndroidManifest.xml:35:17-82
+123            <meta-data
+123-->[com.google.firebase:firebase-firestore-ktx:24.10.1] /home/pat-liemo/.gradle/caches/transforms-3/b013ccdefc3785098f34f35e49f1fc27/transformed/firebase-firestore-ktx-24.10.1/AndroidManifest.xml:12:13-14:85
+124                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreLegacyRegistrar"
+124-->[com.google.firebase:firebase-firestore-ktx:24.10.1] /home/pat-liemo/.gradle/caches/transforms-3/b013ccdefc3785098f34f35e49f1fc27/transformed/firebase-firestore-ktx-24.10.1/AndroidManifest.xml:13:17-129
+125                android:value="com.google.firebase.components.ComponentRegistrar" />
+125-->[com.google.firebase:firebase-firestore-ktx:24.10.1] /home/pat-liemo/.gradle/caches/transforms-3/b013ccdefc3785098f34f35e49f1fc27/transformed/firebase-firestore-ktx-24.10.1/AndroidManifest.xml:14:17-82
+126            <meta-data
+126-->[com.google.firebase:firebase-firestore:24.10.1] /home/pat-liemo/.gradle/caches/transforms-3/810b01be77722e678b673a43bba7382e/transformed/firebase-firestore-24.10.1/AndroidManifest.xml:17:13-19:85
+127                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
+127-->[com.google.firebase:firebase-firestore:24.10.1] /home/pat-liemo/.gradle/caches/transforms-3/810b01be77722e678b673a43bba7382e/transformed/firebase-firestore-24.10.1/AndroidManifest.xml:18:17-122
+128                android:value="com.google.firebase.components.ComponentRegistrar" />
+128-->[com.google.firebase:firebase-firestore:24.10.1] /home/pat-liemo/.gradle/caches/transforms-3/810b01be77722e678b673a43bba7382e/transformed/firebase-firestore-24.10.1/AndroidManifest.xml:19:17-82
+129            <meta-data
+129-->[com.google.firebase:firebase-firestore:24.10.1] /home/pat-liemo/.gradle/caches/transforms-3/810b01be77722e678b673a43bba7382e/transformed/firebase-firestore-24.10.1/AndroidManifest.xml:20:13-22:85
+130                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+130-->[com.google.firebase:firebase-firestore:24.10.1] /home/pat-liemo/.gradle/caches/transforms-3/810b01be77722e678b673a43bba7382e/transformed/firebase-firestore-24.10.1/AndroidManifest.xml:21:17-111
+131                android:value="com.google.firebase.components.ComponentRegistrar" />
+131-->[com.google.firebase:firebase-firestore:24.10.1] /home/pat-liemo/.gradle/caches/transforms-3/810b01be77722e678b673a43bba7382e/transformed/firebase-firestore-24.10.1/AndroidManifest.xml:22:17-82
+132            <meta-data
+132-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/178f6aa3851abbbe269aeac8b6a17fab/transformed/firebase-messaging-ktx-23.4.0/AndroidManifest.xml:26:13-28:85
+133                android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingLegacyRegistrar"
+133-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/178f6aa3851abbbe269aeac8b6a17fab/transformed/firebase-messaging-ktx-23.4.0/AndroidManifest.xml:27:17-129
+134                android:value="com.google.firebase.components.ComponentRegistrar" />
+134-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/178f6aa3851abbbe269aeac8b6a17fab/transformed/firebase-messaging-ktx-23.4.0/AndroidManifest.xml:28:17-82
+135            <meta-data
+135-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:57:13-59:85
+136                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+136-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:58:17-122
+137                android:value="com.google.firebase.components.ComponentRegistrar" />
+137-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:59:17-82
+138            <meta-data
+138-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:60:13-62:85
+139                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+139-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:61:17-119
+140                android:value="com.google.firebase.components.ComponentRegistrar" />
+140-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:62:17-82
+141            <meta-data
+141-->[com.google.firebase:firebase-appcheck:17.1.1] /home/pat-liemo/.gradle/caches/transforms-3/3700e7b2467421e67fa99020a74fb2d1/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:25:13-27:85
+142                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+142-->[com.google.firebase:firebase-appcheck:17.1.1] /home/pat-liemo/.gradle/caches/transforms-3/3700e7b2467421e67fa99020a74fb2d1/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:26:17-120
+143                android:value="com.google.firebase.components.ComponentRegistrar" />
+143-->[com.google.firebase:firebase-appcheck:17.1.1] /home/pat-liemo/.gradle/caches/transforms-3/3700e7b2467421e67fa99020a74fb2d1/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:27:17-82
+144            <meta-data
+144-->[com.google.firebase:firebase-appcheck:17.1.1] /home/pat-liemo/.gradle/caches/transforms-3/3700e7b2467421e67fa99020a74fb2d1/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:28:13-30:85
+145                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+145-->[com.google.firebase:firebase-appcheck:17.1.1] /home/pat-liemo/.gradle/caches/transforms-3/3700e7b2467421e67fa99020a74fb2d1/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:29:17-117
+146                android:value="com.google.firebase.components.ComponentRegistrar" />
+146-->[com.google.firebase:firebase-appcheck:17.1.1] /home/pat-liemo/.gradle/caches/transforms-3/3700e7b2467421e67fa99020a74fb2d1/transformed/firebase-appcheck-17.1.1/AndroidManifest.xml:30:17-82
+147            <meta-data
+147-->[com.google.firebase:firebase-crashlytics-ktx:18.6.1] /home/pat-liemo/.gradle/caches/transforms-3/edaa68d20457380a724b958350e9bb1f/transformed/firebase-crashlytics-ktx-18.6.1/AndroidManifest.xml:24:13-26:85
+148                android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar"
+148-->[com.google.firebase:firebase-crashlytics-ktx:18.6.1] /home/pat-liemo/.gradle/caches/transforms-3/edaa68d20457380a724b958350e9bb1f/transformed/firebase-crashlytics-ktx-18.6.1/AndroidManifest.xml:25:17-130
+149                android:value="com.google.firebase.components.ComponentRegistrar" />
+149-->[com.google.firebase:firebase-crashlytics-ktx:18.6.1] /home/pat-liemo/.gradle/caches/transforms-3/edaa68d20457380a724b958350e9bb1f/transformed/firebase-crashlytics-ktx-18.6.1/AndroidManifest.xml:26:17-82
+150            <meta-data
+150-->[com.google.firebase:firebase-analytics-ktx:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/d7c8c48a3df07f654a5e46e67efdd91a/transformed/firebase-analytics-ktx-21.5.0/AndroidManifest.xml:11:13-13:85
+151                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsLegacyRegistrar"
+151-->[com.google.firebase:firebase-analytics-ktx:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/d7c8c48a3df07f654a5e46e67efdd91a/transformed/firebase-analytics-ktx-21.5.0/AndroidManifest.xml:12:17-129
+152                android:value="com.google.firebase.components.ComponentRegistrar" />
+152-->[com.google.firebase:firebase-analytics-ktx:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/d7c8c48a3df07f654a5e46e67efdd91a/transformed/firebase-analytics-ktx-21.5.0/AndroidManifest.xml:13:17-82
+153            <meta-data
+153-->[com.google.firebase:firebase-crashlytics:18.6.1] /home/pat-liemo/.gradle/caches/transforms-3/a6aba76413a62b7a228d6c6cc5f44b82/transformed/firebase-crashlytics-18.6.1/AndroidManifest.xml:15:13-17:85
+154                android:name="com.google.firebase.components:com.google.firebase.crashlytics.FirebaseCrashlyticsKtxRegistrar"
+154-->[com.google.firebase:firebase-crashlytics:18.6.1] /home/pat-liemo/.gradle/caches/transforms-3/a6aba76413a62b7a228d6c6cc5f44b82/transformed/firebase-crashlytics-18.6.1/AndroidManifest.xml:16:17-126
+155                android:value="com.google.firebase.components.ComponentRegistrar" />
+155-->[com.google.firebase:firebase-crashlytics:18.6.1] /home/pat-liemo/.gradle/caches/transforms-3/a6aba76413a62b7a228d6c6cc5f44b82/transformed/firebase-crashlytics-18.6.1/AndroidManifest.xml:17:17-82
+156            <meta-data
+156-->[com.google.firebase:firebase-crashlytics:18.6.1] /home/pat-liemo/.gradle/caches/transforms-3/a6aba76413a62b7a228d6c6cc5f44b82/transformed/firebase-crashlytics-18.6.1/AndroidManifest.xml:18:13-20:85
+157                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+157-->[com.google.firebase:firebase-crashlytics:18.6.1] /home/pat-liemo/.gradle/caches/transforms-3/a6aba76413a62b7a228d6c6cc5f44b82/transformed/firebase-crashlytics-18.6.1/AndroidManifest.xml:19:17-115
+158                android:value="com.google.firebase.components.ComponentRegistrar" />
+158-->[com.google.firebase:firebase-crashlytics:18.6.1] /home/pat-liemo/.gradle/caches/transforms-3/a6aba76413a62b7a228d6c6cc5f44b82/transformed/firebase-crashlytics-18.6.1/AndroidManifest.xml:20:17-82
+159            <meta-data
+159-->[com.google.firebase:firebase-config:21.6.0] /home/pat-liemo/.gradle/caches/transforms-3/69ac326bac8341448843e58b30a7b6c9/transformed/firebase-config-21.6.0/AndroidManifest.xml:29:13-31:85
+160                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.FirebaseRemoteConfigKtxRegistrar"
+160-->[com.google.firebase:firebase-config:21.6.0] /home/pat-liemo/.gradle/caches/transforms-3/69ac326bac8341448843e58b30a7b6c9/transformed/firebase-config-21.6.0/AndroidManifest.xml:30:17-128
+161                android:value="com.google.firebase.components.ComponentRegistrar" />
+161-->[com.google.firebase:firebase-config:21.6.0] /home/pat-liemo/.gradle/caches/transforms-3/69ac326bac8341448843e58b30a7b6c9/transformed/firebase-config-21.6.0/AndroidManifest.xml:31:17-82
+162            <meta-data
+162-->[com.google.firebase:firebase-config:21.6.0] /home/pat-liemo/.gradle/caches/transforms-3/69ac326bac8341448843e58b30a7b6c9/transformed/firebase-config-21.6.0/AndroidManifest.xml:32:13-34:85
+163                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+163-->[com.google.firebase:firebase-config:21.6.0] /home/pat-liemo/.gradle/caches/transforms-3/69ac326bac8341448843e58b30a7b6c9/transformed/firebase-config-21.6.0/AndroidManifest.xml:33:17-117
+164                android:value="com.google.firebase.components.ComponentRegistrar" />
+164-->[com.google.firebase:firebase-config:21.6.0] /home/pat-liemo/.gradle/caches/transforms-3/69ac326bac8341448843e58b30a7b6c9/transformed/firebase-config-21.6.0/AndroidManifest.xml:34:17-82
+165            <meta-data
+165-->[com.google.firebase:firebase-sessions:1.2.1] /home/pat-liemo/.gradle/caches/transforms-3/c29de36f2736adeaa89c25a25f09078c/transformed/firebase-sessions-1.2.1/AndroidManifest.xml:29:13-31:85
+166                android:name="com.google.firebase.components:com.google.firebase.sessions.FirebaseSessionsRegistrar"
+166-->[com.google.firebase:firebase-sessions:1.2.1] /home/pat-liemo/.gradle/caches/transforms-3/c29de36f2736adeaa89c25a25f09078c/transformed/firebase-sessions-1.2.1/AndroidManifest.xml:30:17-117
+167                android:value="com.google.firebase.components.ComponentRegistrar" />
+167-->[com.google.firebase:firebase-sessions:1.2.1] /home/pat-liemo/.gradle/caches/transforms-3/c29de36f2736adeaa89c25a25f09078c/transformed/firebase-sessions-1.2.1/AndroidManifest.xml:31:17-82
+168            <meta-data
+168-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:37:13-39:85
+169                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+169-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:38:17-139
+170                android:value="com.google.firebase.components.ComponentRegistrar" />
+170-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:39:17-82
+171            <meta-data
+171-->[com.google.firebase:firebase-installations:17.2.0] /home/pat-liemo/.gradle/caches/transforms-3/4121cd3cb28d507c4ca706efa3d83def/transformed/firebase-installations-17.2.0/AndroidManifest.xml:15:13-17:85
+172                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+172-->[com.google.firebase:firebase-installations:17.2.0] /home/pat-liemo/.gradle/caches/transforms-3/4121cd3cb28d507c4ca706efa3d83def/transformed/firebase-installations-17.2.0/AndroidManifest.xml:16:17-130
+173                android:value="com.google.firebase.components.ComponentRegistrar" />
+173-->[com.google.firebase:firebase-installations:17.2.0] /home/pat-liemo/.gradle/caches/transforms-3/4121cd3cb28d507c4ca706efa3d83def/transformed/firebase-installations-17.2.0/AndroidManifest.xml:17:17-82
+174            <meta-data
+174-->[com.google.firebase:firebase-installations:17.2.0] /home/pat-liemo/.gradle/caches/transforms-3/4121cd3cb28d507c4ca706efa3d83def/transformed/firebase-installations-17.2.0/AndroidManifest.xml:18:13-20:85
+175                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+175-->[com.google.firebase:firebase-installations:17.2.0] /home/pat-liemo/.gradle/caches/transforms-3/4121cd3cb28d507c4ca706efa3d83def/transformed/firebase-installations-17.2.0/AndroidManifest.xml:19:17-127
+176                android:value="com.google.firebase.components.ComponentRegistrar" />
+176-->[com.google.firebase:firebase-installations:17.2.0] /home/pat-liemo/.gradle/caches/transforms-3/4121cd3cb28d507c4ca706efa3d83def/transformed/firebase-installations-17.2.0/AndroidManifest.xml:20:17-82
+177            <meta-data
+177-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/051200d89e9132ce0280e95333443839/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:12:13-14:85
+178                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+178-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/051200d89e9132ce0280e95333443839/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:13:17-116
+179                android:value="com.google.firebase.components.ComponentRegistrar" />
+179-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/051200d89e9132ce0280e95333443839/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:14:17-82
+180            <meta-data
+180-->[com.google.firebase:firebase-common:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/a0bc54894bbfb010c069bd3b7612ffd7/transformed/firebase-common-20.4.2/AndroidManifest.xml:35:13-37:85
+181                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+181-->[com.google.firebase:firebase-common:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/a0bc54894bbfb010c069bd3b7612ffd7/transformed/firebase-common-20.4.2/AndroidManifest.xml:36:17-109
+182                android:value="com.google.firebase.components.ComponentRegistrar" />
+182-->[com.google.firebase:firebase-common:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/a0bc54894bbfb010c069bd3b7612ffd7/transformed/firebase-common-20.4.2/AndroidManifest.xml:37:17-82
+183            <meta-data
+183-->[com.google.firebase:firebase-abt:21.1.1] /home/pat-liemo/.gradle/caches/transforms-3/1be8a485dfd33794de7e41fdd7a0682c/transformed/firebase-abt-21.1.1/AndroidManifest.xml:12:13-14:85
+184                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+184-->[com.google.firebase:firebase-abt:21.1.1] /home/pat-liemo/.gradle/caches/transforms-3/1be8a485dfd33794de7e41fdd7a0682c/transformed/firebase-abt-21.1.1/AndroidManifest.xml:13:17-109
+185                android:value="com.google.firebase.components.ComponentRegistrar" />
+185-->[com.google.firebase:firebase-abt:21.1.1] /home/pat-liemo/.gradle/caches/transforms-3/1be8a485dfd33794de7e41fdd7a0682c/transformed/firebase-abt-21.1.1/AndroidManifest.xml:14:17-82
+186            <meta-data
+186-->[com.google.firebase:firebase-datatransport:18.1.8] /home/pat-liemo/.gradle/caches/transforms-3/b64e6dece99d663e31a23984ac00052f/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:27:13-29:85
+187                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+187-->[com.google.firebase:firebase-datatransport:18.1.8] /home/pat-liemo/.gradle/caches/transforms-3/b64e6dece99d663e31a23984ac00052f/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:28:17-115
+188                android:value="com.google.firebase.components.ComponentRegistrar" />
+188-->[com.google.firebase:firebase-datatransport:18.1.8] /home/pat-liemo/.gradle/caches/transforms-3/b64e6dece99d663e31a23984ac00052f/transformed/firebase-datatransport-18.1.8/AndroidManifest.xml:29:17-82
+189        </service>
+190
+191        <activity
+191-->[com.google.android.gms:play-services-auth:20.7.0] /home/pat-liemo/.gradle/caches/transforms-3/79b22c568891cb7852afacadfb86af3e/transformed/play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
+192            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+192-->[com.google.android.gms:play-services-auth:20.7.0] /home/pat-liemo/.gradle/caches/transforms-3/79b22c568891cb7852afacadfb86af3e/transformed/play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
+193            android:excludeFromRecents="true"
+193-->[com.google.android.gms:play-services-auth:20.7.0] /home/pat-liemo/.gradle/caches/transforms-3/79b22c568891cb7852afacadfb86af3e/transformed/play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
+194            android:exported="false"
+194-->[com.google.android.gms:play-services-auth:20.7.0] /home/pat-liemo/.gradle/caches/transforms-3/79b22c568891cb7852afacadfb86af3e/transformed/play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
+195            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+195-->[com.google.android.gms:play-services-auth:20.7.0] /home/pat-liemo/.gradle/caches/transforms-3/79b22c568891cb7852afacadfb86af3e/transformed/play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
+196        <!--
+197            Service handling Google Sign-In user revocation. For apps that do not integrate with
+198            Google Sign-In, this service will never be started.
+199        -->
+200        <service
+200-->[com.google.android.gms:play-services-auth:20.7.0] /home/pat-liemo/.gradle/caches/transforms-3/79b22c568891cb7852afacadfb86af3e/transformed/play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
+201            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+201-->[com.google.android.gms:play-services-auth:20.7.0] /home/pat-liemo/.gradle/caches/transforms-3/79b22c568891cb7852afacadfb86af3e/transformed/play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
+202            android:exported="true"
+202-->[com.google.android.gms:play-services-auth:20.7.0] /home/pat-liemo/.gradle/caches/transforms-3/79b22c568891cb7852afacadfb86af3e/transformed/play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
+203            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+203-->[com.google.android.gms:play-services-auth:20.7.0] /home/pat-liemo/.gradle/caches/transforms-3/79b22c568891cb7852afacadfb86af3e/transformed/play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
+204            android:visibleToInstantApps="true" />
+204-->[com.google.android.gms:play-services-auth:20.7.0] /home/pat-liemo/.gradle/caches/transforms-3/79b22c568891cb7852afacadfb86af3e/transformed/play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
+205
+206        <activity
+206-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:29:9-46:20
+207            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+207-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:30:13-80
+208            android:excludeFromRecents="true"
+208-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:31:13-46
+209            android:exported="true"
+209-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:32:13-36
+210            android:launchMode="singleTask"
+210-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:33:13-44
+211            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+211-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:34:13-72
+212            <intent-filter>
+212-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:35:13-45:29
+213                <action android:name="android.intent.action.VIEW" />
+213-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:17-69
+213-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:25-66
+214
+215                <category android:name="android.intent.category.DEFAULT" />
+215-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:17-76
+215-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:27-73
+216                <category android:name="android.intent.category.BROWSABLE" />
+216-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:17-78
+216-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:27-75
+217
+218                <data
+218-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:41:17-44:51
+219                    android:host="firebase.auth"
+219-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:42:21-49
+220                    android:path="/"
+220-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:43:21-37
+221                    android:scheme="genericidp" />
+221-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:44:21-48
+222            </intent-filter>
+223        </activity>
+224        <activity
+224-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:47:9-64:20
+225            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+225-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:48:13-79
+226            android:excludeFromRecents="true"
+226-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:49:13-46
+227            android:exported="true"
+227-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:50:13-36
+228            android:launchMode="singleTask"
+228-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:51:13-44
+229            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+229-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:52:13-72
+230            <intent-filter>
+230-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:53:13-63:29
+231                <action android:name="android.intent.action.VIEW" />
+231-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:17-69
+231-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:25-66
+232
+233                <category android:name="android.intent.category.DEFAULT" />
+233-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:17-76
+233-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:27-73
+234                <category android:name="android.intent.category.BROWSABLE" />
+234-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:17-78
+234-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:27-75
+235
+236                <data
+236-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:41:17-44:51
+237                    android:host="firebase.auth"
+237-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:42:21-49
+238                    android:path="/"
+238-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:43:21-37
+239                    android:scheme="recaptcha" />
+239-->[com.google.firebase:firebase-auth:22.3.1] /home/pat-liemo/.gradle/caches/transforms-3/b48207065cf4ebe9fa085ff6ac43f456/transformed/firebase-auth-22.3.1/AndroidManifest.xml:44:21-48
+240            </intent-filter>
+241        </activity>
+242
+243        <receiver
+243-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:29:9-40:20
+244            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+244-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:30:13-78
+245            android:exported="true"
+245-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:31:13-36
+246            android:permission="com.google.android.c2dm.permission.SEND" >
+246-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:32:13-73
+247            <intent-filter>
+247-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:33:13-35:29
+248                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+248-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:34:17-81
+248-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:34:25-78
+249            </intent-filter>
+250
+251            <meta-data
+251-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:37:13-39:40
+252                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+252-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:38:17-92
+253                android:value="true" />
+253-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:39:17-37
+254        </receiver>
+255        <!--
+256             FirebaseMessagingService performs security checks at runtime,
+257             but set to not exported to explicitly avoid allowing another app to call it.
+258        -->
+259        <service
+259-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:46:9-53:19
+260            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+260-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:47:13-82
+261            android:directBootAware="true"
+261-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:48:13-43
+262            android:exported="false" >
+262-->[com.google.firebase:firebase-messaging:23.4.0] /home/pat-liemo/.gradle/caches/transforms-3/5c67417c3a2a351e67482073badd0522/transformed/firebase-messaging-23.4.0/AndroidManifest.xml:49:13-37
+263            <intent-filter android:priority="-500" >
+263-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:47:13-49:29
+264                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+264-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:48:17-78
+264-->/home/pat-liemo/Desktop/finance-app/app/src/main/AndroidManifest.xml:48:25-75
+265            </intent-filter>
+266        </service>
+267
+268        <activity
+268-->[com.google.android.gms:play-services-base:18.0.1] /home/pat-liemo/.gradle/caches/transforms-3/741041b61acc2308e4dbf86d90f214d9/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+269            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+269-->[com.google.android.gms:play-services-base:18.0.1] /home/pat-liemo/.gradle/caches/transforms-3/741041b61acc2308e4dbf86d90f214d9/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+270            android:exported="false"
+270-->[com.google.android.gms:play-services-base:18.0.1] /home/pat-liemo/.gradle/caches/transforms-3/741041b61acc2308e4dbf86d90f214d9/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+271            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+271-->[com.google.android.gms:play-services-base:18.0.1] /home/pat-liemo/.gradle/caches/transforms-3/741041b61acc2308e4dbf86d90f214d9/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+272
+273        <service
+273-->[com.google.firebase:firebase-sessions:1.2.1] /home/pat-liemo/.gradle/caches/transforms-3/c29de36f2736adeaa89c25a25f09078c/transformed/firebase-sessions-1.2.1/AndroidManifest.xml:22:9-25:40
+274            android:name="com.google.firebase.sessions.SessionLifecycleService"
+274-->[com.google.firebase:firebase-sessions:1.2.1] /home/pat-liemo/.gradle/caches/transforms-3/c29de36f2736adeaa89c25a25f09078c/transformed/firebase-sessions-1.2.1/AndroidManifest.xml:23:13-80
+275            android:enabled="true"
+275-->[com.google.firebase:firebase-sessions:1.2.1] /home/pat-liemo/.gradle/caches/transforms-3/c29de36f2736adeaa89c25a25f09078c/transformed/firebase-sessions-1.2.1/AndroidManifest.xml:24:13-35
+276            android:exported="false" />
+276-->[com.google.firebase:firebase-sessions:1.2.1] /home/pat-liemo/.gradle/caches/transforms-3/c29de36f2736adeaa89c25a25f09078c/transformed/firebase-sessions-1.2.1/AndroidManifest.xml:25:13-37
+277
+278        <property
+278-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:30:9-32:61
+279            android:name="android.adservices.AD_SERVICES_CONFIG"
+279-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:31:13-65
+280            android:resource="@xml/ga_ad_services_config" />
+280-->[com.google.android.gms:play-services-measurement-api:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/869f17935115fd7bc11c00bc6f9c3455/transformed/play-services-measurement-api-21.5.0/AndroidManifest.xml:32:13-58
+281
+282        <provider
+282-->[com.google.firebase:firebase-common:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/a0bc54894bbfb010c069bd3b7612ffd7/transformed/firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
+283            android:name="com.google.firebase.provider.FirebaseInitProvider"
+283-->[com.google.firebase:firebase-common:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/a0bc54894bbfb010c069bd3b7612ffd7/transformed/firebase-common-20.4.2/AndroidManifest.xml:24:13-77
+284            android:authorities="com.personalfinance.app.firebaseinitprovider"
+284-->[com.google.firebase:firebase-common:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/a0bc54894bbfb010c069bd3b7612ffd7/transformed/firebase-common-20.4.2/AndroidManifest.xml:25:13-72
+285            android:directBootAware="true"
+285-->[com.google.firebase:firebase-common:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/a0bc54894bbfb010c069bd3b7612ffd7/transformed/firebase-common-20.4.2/AndroidManifest.xml:26:13-43
+286            android:exported="false"
+286-->[com.google.firebase:firebase-common:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/a0bc54894bbfb010c069bd3b7612ffd7/transformed/firebase-common-20.4.2/AndroidManifest.xml:27:13-37
+287            android:initOrder="100" />
+287-->[com.google.firebase:firebase-common:20.4.2] /home/pat-liemo/.gradle/caches/transforms-3/a0bc54894bbfb010c069bd3b7612ffd7/transformed/firebase-common-20.4.2/AndroidManifest.xml:28:13-36
+288
+289        <receiver
+289-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:29:9-33:20
+290            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+290-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:30:13-85
+291            android:enabled="true"
+291-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:31:13-35
+292            android:exported="false" >
+292-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:32:13-37
+293        </receiver>
+294
+295        <service
+295-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:35:9-38:40
+296            android:name="com.google.android.gms.measurement.AppMeasurementService"
+296-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:36:13-84
+297            android:enabled="true"
+297-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:37:13-35
+298            android:exported="false" />
+298-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:38:13-37
+299        <service
+299-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:39:9-43:72
+300            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+300-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:40:13-87
+301            android:enabled="true"
+301-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:41:13-35
+302            android:exported="false"
+302-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:42:13-37
+303            android:permission="android.permission.BIND_JOB_SERVICE" />
+303-->[com.google.android.gms:play-services-measurement:21.5.0] /home/pat-liemo/.gradle/caches/transforms-3/ee9caaffc3f22a67450f22d621b8fc94/transformed/play-services-measurement-21.5.0/AndroidManifest.xml:43:13-69
+304        <service
+304-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:39:9-45:35
+305            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+305-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:40:13-88
+306            android:directBootAware="false"
+306-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:41:13-44
+307            android:enabled="@bool/enable_system_alarm_service_default"
+307-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:42:13-72
+308            android:exported="false" />
+308-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:43:13-37
+309        <service
+309-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:46:9-52:35
+310            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+310-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:47:13-84
+311            android:directBootAware="false"
+311-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:48:13-44
+312            android:enabled="@bool/enable_system_job_service_default"
+312-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:49:13-70
+313            android:exported="true"
+313-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:50:13-36
+314            android:permission="android.permission.BIND_JOB_SERVICE" />
+314-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:51:13-69
+315        <service
+315-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:53:9-59:35
+316            android:name="androidx.work.impl.foreground.SystemForegroundService"
+316-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:54:13-81
+317            android:directBootAware="false"
+317-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:55:13-44
+318            android:enabled="@bool/enable_system_foreground_service_default"
+318-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:56:13-77
+319            android:exported="false" />
+319-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:57:13-37
+320
+321        <receiver
+321-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:61:9-66:35
+322            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+322-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:62:13-88
+323            android:directBootAware="false"
+323-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:63:13-44
+324            android:enabled="true"
+324-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:64:13-35
+325            android:exported="false" />
+325-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:65:13-37
+326        <receiver
+326-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:67:9-77:20
+327            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+327-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:68:13-106
+328            android:directBootAware="false"
+328-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:69:13-44
+329            android:enabled="false"
+329-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:70:13-36
+330            android:exported="false" >
+330-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:71:13-37
+331            <intent-filter>
+331-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:73:13-76:29
+332                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+332-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:17-87
+332-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:74:25-84
+333                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+333-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:17-90
+333-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:75:25-87
+334            </intent-filter>
+335        </receiver>
+336        <receiver
+336-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:78:9-88:20
+337            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+337-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:79:13-104
+338            android:directBootAware="false"
+338-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:80:13-44
+339            android:enabled="false"
+339-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:81:13-36
+340            android:exported="false" >
+340-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:82:13-37
+341            <intent-filter>
+341-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:84:13-87:29
+342                <action android:name="android.intent.action.BATTERY_OKAY" />
+342-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:17-77
+342-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:85:25-74
+343                <action android:name="android.intent.action.BATTERY_LOW" />
+343-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:17-76
+343-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:86:25-73
+344            </intent-filter>
+345        </receiver>
+346        <receiver
+346-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:89:9-99:20
+347            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+347-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:90:13-104
+348            android:directBootAware="false"
+348-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:91:13-44
+349            android:enabled="false"
+349-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:92:13-36
+350            android:exported="false" >
+350-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:93:13-37
+351            <intent-filter>
+351-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:95:13-98:29
+352                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+352-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:17-83
+352-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:96:25-80
+353                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+353-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:17-82
+353-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:97:25-79
+354            </intent-filter>
+355        </receiver>
+356        <receiver
+356-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:100:9-109:20
+357            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+357-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:101:13-103
+358            android:directBootAware="false"
+358-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:102:13-44
+359            android:enabled="false"
+359-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:103:13-36
+360            android:exported="false" >
+360-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:104:13-37
+361            <intent-filter>
+361-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:106:13-108:29
+362                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+362-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:17-79
+362-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:107:25-76
+363            </intent-filter>
+364        </receiver>
+365        <receiver
+365-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:110:9-121:20
+366            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+366-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:111:13-88
+367            android:directBootAware="false"
+367-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:112:13-44
+368            android:enabled="false"
+368-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:113:13-36
+369            android:exported="false" >
+369-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:114:13-37
+370            <intent-filter>
+370-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:116:13-120:29
+371                <action android:name="android.intent.action.BOOT_COMPLETED" />
+371-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:17-79
+371-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:117:25-76
+372                <action android:name="android.intent.action.TIME_SET" />
+372-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:17-73
+372-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:118:25-70
+373                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+373-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:17-81
+373-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:119:25-78
+374            </intent-filter>
+375        </receiver>
+376        <receiver
+376-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:122:9-131:20
+377            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+377-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:123:13-99
+378            android:directBootAware="false"
+378-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:124:13-44
+379            android:enabled="@bool/enable_system_alarm_service_default"
+379-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:125:13-72
+380            android:exported="false" >
+380-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:126:13-37
+381            <intent-filter>
+381-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:128:13-130:29
+382                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+382-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:17-98
+382-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:129:25-95
+383            </intent-filter>
+384        </receiver>
+385        <receiver
+385-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:132:9-142:20
+386            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+386-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:133:13-78
+387            android:directBootAware="false"
+387-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:134:13-44
+388            android:enabled="true"
+388-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:135:13-35
+389            android:exported="true"
+389-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:136:13-36
+390            android:permission="android.permission.DUMP" >
+390-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:137:13-57
+391            <intent-filter>
+391-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:139:13-141:29
+392                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+392-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:17-88
+392-->[androidx.work:work-runtime:2.9.0] /home/pat-liemo/.gradle/caches/transforms-3/c0c964ef7bc34a20ea268d41173c8f00/transformed/work-runtime-2.9.0/AndroidManifest.xml:140:25-85
+393            </intent-filter>
+394        </receiver>
+395
+396        <activity
+396-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/pat-liemo/.gradle/caches/transforms-3/42c97eed8563da98b5f2c69f401cc471/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:23:9-25:39
+397            android:name="androidx.activity.ComponentActivity"
+397-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/pat-liemo/.gradle/caches/transforms-3/42c97eed8563da98b5f2c69f401cc471/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:24:13-63
+398            android:exported="true" />
+398-->[androidx.compose.ui:ui-test-manifest:1.6.1] /home/pat-liemo/.gradle/caches/transforms-3/42c97eed8563da98b5f2c69f401cc471/transformed/ui-test-manifest-1.6.1/AndroidManifest.xml:25:13-36
+399        <activity
+399-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/pat-liemo/.gradle/caches/transforms-3/3ca84ba57d342be23ebef61df11dff84/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+400            android:name="androidx.compose.ui.tooling.PreviewActivity"
+400-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/pat-liemo/.gradle/caches/transforms-3/3ca84ba57d342be23ebef61df11dff84/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+401            android:exported="true" />
+401-->[androidx.compose.ui:ui-tooling-android:1.6.1] /home/pat-liemo/.gradle/caches/transforms-3/3ca84ba57d342be23ebef61df11dff84/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+402
+403        <service
+403-->[androidx.room:room-runtime:2.6.1] /home/pat-liemo/.gradle/caches/transforms-3/0838ebf30af433702d617a78edc03505/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+404            android:name="androidx.room.MultiInstanceInvalidationService"
+404-->[androidx.room:room-runtime:2.6.1] /home/pat-liemo/.gradle/caches/transforms-3/0838ebf30af433702d617a78edc03505/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+405            android:directBootAware="true"
+405-->[androidx.room:room-runtime:2.6.1] /home/pat-liemo/.gradle/caches/transforms-3/0838ebf30af433702d617a78edc03505/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+406            android:exported="false" />
+406-->[androidx.room:room-runtime:2.6.1] /home/pat-liemo/.gradle/caches/transforms-3/0838ebf30af433702d617a78edc03505/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+407
+408        <uses-library
+408-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /home/pat-liemo/.gradle/caches/transforms-3/f1bd230b6b140a03daf32612d1e9e5dc/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:23:9-25:40
+409            android:name="android.ext.adservices"
+409-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /home/pat-liemo/.gradle/caches/transforms-3/f1bd230b6b140a03daf32612d1e9e5dc/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:24:13-50
+410            android:required="false" />
+410-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] /home/pat-liemo/.gradle/caches/transforms-3/f1bd230b6b140a03daf32612d1e9e5dc/transformed/ads-adservices-1.0.0-beta05/AndroidManifest.xml:25:13-37
+411
+412        <meta-data
+412-->[com.google.android.gms:play-services-basement:18.2.0] /home/pat-liemo/.gradle/caches/transforms-3/fa44aecf2068acccc74fa60fff9fd65d/transformed/play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
+413            android:name="com.google.android.gms.version"
+413-->[com.google.android.gms:play-services-basement:18.2.0] /home/pat-liemo/.gradle/caches/transforms-3/fa44aecf2068acccc74fa60fff9fd65d/transformed/play-services-basement-18.2.0/AndroidManifest.xml:22:13-58
+414            android:value="@integer/google_play_services_version" />
+414-->[com.google.android.gms:play-services-basement:18.2.0] /home/pat-liemo/.gradle/caches/transforms-3/fa44aecf2068acccc74fa60fff9fd65d/transformed/play-services-basement-18.2.0/AndroidManifest.xml:23:13-66
+415
+416        <service
+416-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/d8be3cd77445cc0d5de64a8cb73ac940/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:28:9-34:19
+417            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+417-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/d8be3cd77445cc0d5de64a8cb73ac940/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:29:13-103
+418            android:exported="false" >
+418-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/d8be3cd77445cc0d5de64a8cb73ac940/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:30:13-37
+419            <meta-data
+419-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/d8be3cd77445cc0d5de64a8cb73ac940/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:31:13-33:39
+420                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+420-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/d8be3cd77445cc0d5de64a8cb73ac940/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:32:17-94
+421                android:value="cct" />
+421-->[com.google.android.datatransport:transport-backend-cct:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/d8be3cd77445cc0d5de64a8cb73ac940/transformed/transport-backend-cct-3.1.9/AndroidManifest.xml:33:17-36
+422        </service>
+423
+424        <receiver
+424-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+425            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+425-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+426            android:directBootAware="false"
+426-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+427            android:enabled="true"
+427-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+428            android:exported="true"
+428-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+429            android:permission="android.permission.DUMP" >
+429-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+430            <intent-filter>
+430-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+431                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+431-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+431-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+432            </intent-filter>
+433            <intent-filter>
+433-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+434                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+434-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+434-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+435            </intent-filter>
+436            <intent-filter>
+436-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+437                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+437-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+437-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+438            </intent-filter>
+439            <intent-filter>
+439-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+440                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+440-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+440-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/pat-liemo/.gradle/caches/transforms-3/2585b68ea0b269c6467f21aa149fb70c/transformed/profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+441            </intent-filter>
+442        </receiver>
+443
+444        <service
+444-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/fd80849e82bf96fd8ab4e4db6e323f06/transformed/transport-runtime-3.1.9/AndroidManifest.xml:26:9-30:19
+445            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+445-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/fd80849e82bf96fd8ab4e4db6e323f06/transformed/transport-runtime-3.1.9/AndroidManifest.xml:27:13-117
+446            android:exported="false"
+446-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/fd80849e82bf96fd8ab4e4db6e323f06/transformed/transport-runtime-3.1.9/AndroidManifest.xml:28:13-37
+447            android:permission="android.permission.BIND_JOB_SERVICE" >
+447-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/fd80849e82bf96fd8ab4e4db6e323f06/transformed/transport-runtime-3.1.9/AndroidManifest.xml:29:13-69
+448        </service>
+449
+450        <receiver
+450-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/fd80849e82bf96fd8ab4e4db6e323f06/transformed/transport-runtime-3.1.9/AndroidManifest.xml:32:9-34:40
+451            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+451-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/fd80849e82bf96fd8ab4e4db6e323f06/transformed/transport-runtime-3.1.9/AndroidManifest.xml:33:13-132
+452            android:exported="false" />
+452-->[com.google.android.datatransport:transport-runtime:3.1.9] /home/pat-liemo/.gradle/caches/transforms-3/fd80849e82bf96fd8ab4e4db6e323f06/transformed/transport-runtime-3.1.9/AndroidManifest.xml:34:13-37
+453    </application>
+454
+455</manifest>

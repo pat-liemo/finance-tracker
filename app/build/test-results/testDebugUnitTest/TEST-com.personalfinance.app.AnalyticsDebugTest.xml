@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.personalfinance.app.AnalyticsDebugTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-12-26T14:46:20" hostname="aloo-pc" time="0.019">
+  <properties/>
+  <testcase name="Debug - Print AnalyticsRepositoryImpl methods" classname="com.personalfinance.app.AnalyticsDebugTest" time="0.012"/>
+  <testcase name="Debug - Print ExportRepositoryImpl methods" classname="com.personalfinance.app.AnalyticsDebugTest" time="0.006"/>
+  <system-out><![CDATA[AnalyticsRepositoryImpl methods:
+  - generateSpendingBreakdown-gIAlu-s
+  - generateIncomeVsExpenseChart-gIAlu-s
+  - calculateTrends-gIAlu-s
+  - getBudgetUtilization-IoAF18A
+  - detectSpendingBehaviorChanges-gIAlu-s
+ExportRepositoryImpl methods:
+  - exportTransactionsToCSV-gIAlu-s
+  - exportTransactionsToExcel-gIAlu-s
+  - exportTransactionsToPDF-gIAlu-s
+  - exportAnalyticsReport-0E7RQCE
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
